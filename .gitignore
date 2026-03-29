@@ -1,0 +1,22 @@
+# Credentials & runtime data
+data.json
+
+# Uploaded images (user content)
+images/
+
+# DDEV
+.ddev/
+
+# Claude
+memory/
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
