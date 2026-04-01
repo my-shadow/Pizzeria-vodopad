@@ -1,9 +1,6 @@
 # Credentials & runtime data
 data.json
 
-# Uploaded images (user content)
-images/
-
 # DDEV
 .ddev/
 
