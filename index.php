@@ -220,7 +220,7 @@ tailwind.config = {
                         $ar = $about_ratios[$ai];
                         $cls = strpos($ar, 'aspect-square') !== false ? 'aspect-square' : '';
                     ?>
-                    <div class="gallery-item <?= $cls ?> rounded-2xl" <?= $cls ? '' : $ar ?>>
+                    <div class="gallery-item <?= $cls ?> rounded-2xl cursor-pointer" <?= $cls ? '' : $ar ?> data-gallery="landing" data-index="<?= $ai ?>">
                         <?php if ($af): ?><img src="images/<?= e($af) ?>" alt="Піцерія Travel" loading="lazy"><?php endif; ?>
                     </div>
                     <?php endfor; ?>
