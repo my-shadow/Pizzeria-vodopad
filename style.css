@@ -15,13 +15,16 @@ body { background: #0c0a09; color: #e7e5e4; }
 .anim-left  { transform: translateX(-40px); }
 .anim-right { transform: translateX(40px); }
 .anim.visible { opacity: 1; transform: none; }
+@media (max-width: 767px) {
+    .anim { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
 
 /* Nav */
 nav { transition: background .3s, backdrop-filter .3s, box-shadow .3s; }
 nav.scrolled { background: rgba(12,10,9,.96) !important; backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(255,255,255,.06); }
 
 /* Hero */
-.hero-overlay { background: linear-gradient(135deg, rgba(12,10,9,.92) 0%, rgba(12,10,9,.55) 55%, rgba(220,38,38,.1) 100%); }
+.hero-overlay { background: linear-gradient(135deg, rgba(12, 10, 9, .92) 0%, rgb(0 0 0 / 76%) 55%, rgb(0 0 0 / 10%) 100%); }
 
 /* Divider accent */
 .accent-bar { display: inline-block; width: 52px; height: 3px; background: linear-gradient(90deg, #f59e0b, #dc2626); border-radius: 2px; }
@@ -34,7 +37,8 @@ nav.scrolled { background: rgba(12,10,9,.96) !important; backdrop-filter: blur(1
 .pizza-card:hover .thumb img { transform: scale(1.07); }
 
 /* Promo */
-.promo-card { background: linear-gradient(135deg, rgba(245,158,11,.08), rgba(220,38,38,.04)); border: 1px solid rgba(245,158,11,.18); border-radius: 20px; }
+.promo-card { position: relative; overflow: visible; background: linear-gradient(135deg, rgba(245,158,11,.08), rgba(220,38,38,.04)); border: 1px solid rgba(245,158,11,.18); border-radius: 20px; }
+.promo-img { position: absolute; pointer-events: none; filter: drop-shadow(0 8px 28px rgba(0,0,0,.55)); }
 
 /* Gallery */
 .gallery-item { overflow: hidden; border-radius: 12px; }

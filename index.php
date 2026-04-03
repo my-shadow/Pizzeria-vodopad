@@ -99,7 +99,7 @@ tailwind.config = {
         <div class="max-w-2xl">
             <div class="inline-flex items-center gap-2 bg-amber-400/10 border border-amber-400/25 rounded-full px-4 py-2 mb-6">
                 <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
-                <span class="text-amber-400 text-[16px]">Центр Хмельницького · вул. Шевченка 89</span>
+                <span class="text-amber-400 text-[16px]">з/д вокзал · вул. Шевченка 89</span>
             </div>
 
             <h1 class="font-playfair text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
@@ -258,10 +258,10 @@ tailwind.config = {
         $pizza_photos_json = json_encode(array_map(fn($f) => 'images/pizza-photo/' . $f, $pizza_photos));
         ?>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 anim anim-up">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 gap-3 anim anim-up">
         <?php foreach ($pizza_photos as $i => $photo): ?>
-            <div class="pizza-gallery-item cursor-pointer" data-gallery="pizza" style="aspect-ratio:3/4; overflow:hidden; border-radius:14px;" data-index="<?= $i ?>">
-                <img src="images/pizza-photo/<?= e($photo) ?>" alt="Піца" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;">
+            <div class="pizza-gallery-item cursor-pointer" data-gallery="pizza" style="overflow:hidden; border-radius:14px;" data-index="<?= $i ?>">
+                <img src="images/pizza-photo/<?= e($photo) ?>" alt="Піца" loading="lazy" style="width:100%;height:auto;object-fit:cover;display:block;transition:transform .4s ease;">
             </div>
         <?php endforeach; ?>
         </div>
@@ -290,10 +290,10 @@ tailwind.config = {
         $other_photos_json = json_encode(array_map(fn($f) => 'images/meals-photo/' . $f, $other_photos));
         ?>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 anim anim-up">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 gap-3 anim anim-up">
         <?php foreach ($other_photos as $i => $photo): ?>
-            <div class="pizza-gallery-item cursor-pointer" data-gallery="other" style="aspect-ratio:3/4; overflow:hidden; border-radius:14px;" data-index="<?= $i ?>">
-                <img src="images/meals-photo/<?= e($photo) ?>" alt="Страва" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;">
+            <div class="pizza-gallery-item cursor-pointer" data-gallery="other" style="overflow:hidden; border-radius:14px;" data-index="<?= $i ?>">
+                <img src="images/meals-photo/<?= e($photo) ?>" alt="Страва" loading="lazy" style="width:100%;height:auto;object-fit:cover;display:block;transition:transform .4s ease;">
             </div>
         <?php endforeach; ?>
         </div>
@@ -311,10 +311,10 @@ tailwind.config = {
             <p class="text-stone-400 text-[17px]">Вигідні пропозиції для наших гостей</p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto" style="overflow:visible; padding-top:3rem;">
             <div class="promo-card p-8 anim anim-left">
-                <div class="text-5xl mb-5">🍕</div>
-                <h3 class="font-playfair text-2xl font-bold text-white mb-3">Мега-комбо</h3>
+                <img src="/images/other/pizza-slice-reversed.png" class="promo-img" style="width:150px; top:-40px; right:-25px;" alt="Кусок піцци">
+                <h3 class="font-playfair text-3xl md:text-4xl font-bold text-white mb-7">Мега-комбо</h3>
                 <p class="text-stone-300 text-[17px] leading-relaxed mb-4">
                     Замовте <span class="text-amber-400 font-bold">2 мега-піци 60 см</span> — і отримайте <span class="text-amber-400 font-bold">третю 30 см в подарунок!</span>
                 </p>
@@ -324,10 +324,10 @@ tailwind.config = {
             </div>
 
             <div class="promo-card p-8 anim anim-right">
-                <div class="text-5xl mb-5">🍺</div>
-                <h3 class="font-playfair text-2xl font-bold text-white mb-3">Піца + пиво</h3>
+                <img src="/images/other/three-beers.png" class="promo-img" style="width:160px; top:-50px; right:-25px;" alt="3 бокали пива">
+                <h3 class="font-playfair text-3xl md:text-4xl font-bold text-white mb-7">Мега-пиво</h3>
                 <p class="text-stone-300 text-[17px] leading-relaxed mb-4">
-                    При замовленні <span class="text-amber-400 font-bold">2 мега-піц</span> — <span class="text-amber-400 font-bold">3 бокали пива безкоштовно!</span>
+                    При замовленні <span class="text-amber-400 font-bold">2 мега-піц</span> — <br><span class="text-amber-400 font-bold">3 бокали пива безкоштовно!</span>
                 </p>
                 <div class="inline-flex items-center gap-2 text-green-400 text-[16px] font-bold">
                     <i class="fa-solid fa-circle-check"></i> Лагер, темне або пшеничне
